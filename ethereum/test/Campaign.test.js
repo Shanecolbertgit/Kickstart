@@ -30,3 +30,11 @@ beforeEach(async () => {
     );
 
 });
+
+describe('Campaigns', () => {
+    it('deploys a factory and a campaign', () => {
+        assert.ok(factory.options.address);
+        assert.ok(camapaign.options.address);
+    });
+
+});
