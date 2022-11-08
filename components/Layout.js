@@ -1,9 +1,10 @@
 import react from 'react';
+import header from './header';
 
 export default (props) => {
     return (
         <div>
-            <h1> Im a header</h1>
+            <header />
             {props.children}
         </div>
     );
