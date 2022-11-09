@@ -1,8 +1,13 @@
 import react, { Component } from 'react';
+import Layout from '../../components/Layout';
 
 class CamapignNew extends Component {
     render() {
-        return <h1>New Camapign!</h1>;
+        return (
+            <Layout>
+                <h1>New Camapign!</h1>
+            </Layout>
+        );
     }
 }
 
