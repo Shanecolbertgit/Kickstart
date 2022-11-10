@@ -3,6 +3,7 @@ import { Form, Button, Input, Message } from 'smeanic-ui-react';
 import Layout from '../../components/Layout';
 import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
+import { Router } from '../../routes';
 
 class CamapignNew extends Component {
     state = {
@@ -24,6 +25,8 @@ class CamapignNew extends Component {
                     from: accounts[0]
 
                 });
+
+            Router.pushRoute('/');
         } catch (err) {
             this.setState({ errorMessage: err.message });
 
@@ -51,7 +54,7 @@ class CamapignNew extends Component {
                     <message error header="Oops!" content={this.state.errorMessage} />
 
                     <Button loading={this.state.loading} primary>
-                    Create!
+                        Create!
                     </Button>
 
                 </Form>
