@@ -1,6 +1,6 @@
 import react, { Component } from 'react';
 import Layout from '../../components/Layout';
-import Campaign from '../ethereum/campaign';
+import Campaign from '../../ethereum/campaign';
 
 class CampaignShow extends Component {
 
