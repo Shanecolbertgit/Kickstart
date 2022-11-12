@@ -81,4 +81,28 @@ contract Campaign {
         request.recipient.transfer(request.value);
         request.complete = true;
     }
+
+    function gerSummery()
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            address
+        )
+    {
+        return (
+            minimumContribution,
+            this.balance,
+            request.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestCount() public view returns (uint256) {
+        return request.length;
+    }
 }
