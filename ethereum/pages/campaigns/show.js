@@ -7,12 +7,22 @@ class CampaignShow extends Component {
     static async getInitialProps(props) {
         const campaign = Campaign(props.query.address);
 
-        const summery = await CampaignShow.metiods.getSummery().call();
-
-        console.log(summery);
+        const summary = await CampaignShow.metiods.getSummery().call();
 
 
-        return {};
+
+        return {
+            minimumCoribution: summery[0],
+            balance: summary[1],
+            requestCount: summary[2],
+            approbersCount: summary[3],
+            manager: summary[4]
+
+        };
+    }
+
+    renderCards() {
+        const items = 
     }
     render() {
         return (
