@@ -15,6 +15,7 @@ class CampaignShow extends Component {
 
 
         return {
+            address: props.query.address,
             minimumCoribution: summery[0],
             balance: summary[1],
             requestCount: summary[2],
@@ -79,7 +80,7 @@ class CampaignShow extends Component {
                     </Grid.Column>
 
                     <Grid.Column width={6}>
-                        <ContributeForm />
+                        <ContributeForm address={this.props.address} />
                     </Grid.Column>
 
                 </Grid>
